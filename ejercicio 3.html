@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIO 3</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+
+<body>
+    
+<main>
+
+    <header>
+        <img src="img/logo.png" alt="logo" height="70px">
+
+    </header>
+
+    <div id="caso">
+        <img src="img/ejercicio3.png" alt="">
+    </div>
+
+    <h1>EXAMEN PARCIAL / 2024-1</h1>
+
+
+    <div id="solucion">
+
+        <script>
+            // Declaracion de variables
+            var edad,mensaje;
+
+            // fase de lectura / estructura
+
+            edad= parseInt(prompt("Edad de la persona"));
+            
+
+            //fase procesamientos de datos
+            //Fase de salida
+
+            if (edad<=10) {
+                mensaje="NIÑO";
+            } else {
+                if (edad<=15) {
+                    mensaje="PUBER";
+                } else {
+                    if (edad<=19) {
+                        mensaje="ADOLESCENTE";
+                    } else {
+                        if (edad<=26) {
+                            mensaje="JOVEN";
+                        } else {
+                            if (edad<=65) {
+                                mensaje="ADULTO";
+                            } else {
+                                mensaje="ANCIANO";
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            //Fase de Salida
+
+            document.write("=======ETIQUETA SEGUN LA EDAD======="+"<br>");
+            document.write("<br>");
+            document.write("EDAD INGRESADA: "+edad+ " AÑOS <br>");
+            document.write("<br>");
+            document.write("ESTA PERSONA CALIFICA COMO: " +mensaje+ "<br>");
+            document.write("<br>");
+
+        </script>
+    </div>
+   
+</main>
+
+
+</body>
+</html>

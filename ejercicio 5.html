@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIO 5</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+
+<body>
+    
+<main>
+
+    <header>
+        <img src="img/logo.png" alt="logo" height="70px">
+
+    </header>
+
+    <div id="caso">
+        <img src="img/ejercicio5.png" alt="">
+    </div>
+
+    <h1>EXAMEN PARCIAL / 2024-1</h1>
+
+
+    <div id="solucion">
+
+        <script>
+            // Declaracion de variables
+
+            var precios,precio_persona,seguro,traslados,impuesto,monto_paquete,monto_total,monto_seguro,monto_traslado,impuesto_total,total_solo,descuento;
+
+            // fase de lectura / estructura
+
+            paquete=(prompt("Ingresa el paquete ")); 
+            cantidad_person=parseInt(prompt("Ingresa la cantidad de personas"));   
+            pago=(prompt("Forma de pago en [efectivo] o [tarjeta]"));
+
+
+            precio_persona;
+
+            //fase procesamientos de datos
+
+            switch (paquete) {
+                    case "Colca":
+                    precio_persona=550;
+                    break;
+                    case "Cusco":
+                    precio_persona=700;
+                    break;
+                    case "Mancora":
+                    precio_persona=450;
+                    break;
+                default:
+                    precio_persona=440;   
+            }
+
+            seguro=140;
+            traslados=150;
+            impuesto=0.02;
+
+            monto_paquete=precio_persona*cantidad_person;
+            monto_seguro= seguro*cantidad_person;
+            monto_traslado= traslados*cantidad_person;
+            impuesto_total=monto_paquete*impuesto;
+
+            total_solo=monto_paquete+monto_seguro+monto_traslado+impuesto_total;
+
+
+          //  Fase de salida
+
+           
+              descuento=0;
+             if (pago === "efectivo") {
+                descuento = total_solo * 0.10;
+            } else if (pago === "tarjeta") {
+                descuento = total_solo * 0.05;  
+            }
+
+             monto_total= total_solo-descuento;
+
+            //Fase de Salida
+
+            document.write("=======PAGO POR UN VIAJE======="+"<br>");
+            document.write("<br>");
+            document.write("COSTO DEL PAQUETE: S/ "+monto_paquete+ " <br>");
+            document.write("MONTO DEL SEGURO: S/ " +monto_seguro+ "<br>");
+            document.write("MONTO DEL TRASLADO S/ " +monto_traslado+ "<br>");
+            document.write("IMPUESTOS: S/ " +impuesto_total+ "<br>");
+            document.write("DESCUENTO DE: S/ " +descuento+ "<br>");
+            document.write("MONTO TOTAL A PAGAR: S/ " +monto_total+ "<br>");
+            document.write("<br>");
+
+        </script>
+    </div>
+   
+</main>
+
+
+</body>
+</html>

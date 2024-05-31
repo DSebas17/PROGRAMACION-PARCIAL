@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIO 4</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+
+<body>
+    
+<main>
+
+    <header>
+        <img src="img/logo.png" alt="logo" height="70px">
+
+    </header>
+
+    <div id="caso">
+        <img src="img/ejercicio4.png" alt="">
+    </div>
+
+    <h1>EXAMEN PARCIAL / 2024-1</h1>
+
+
+    <div id="solucion">
+
+        <script>
+            // Declaracion de variables
+            var area,opcion;
+
+            // fase de lectura / estructura
+
+            opcion= parseInt(prompt(" SELECCIONA UN NÚMERO PARA SACAR EL ÁREA [1] CUADRADO / [2] RECTANGULO / [3]TRIANGULO / [4] CÍRCULO"));
+            
+
+            //fase procesamientos de datos
+            //Fase de salida
+
+            if (opcion===1) {
+                lado= parseInt(prompt("Ingresa la medida del lado del cuadrado"));
+                area= lado*lado;
+
+                document.write("=======CUADRADO RESULTADO======="+"<br>");
+                document.write("<br>");
+                document.write("LONGITUD DE CADA LADO: "+lado+ " <br>");
+                document.write("<br>");
+                document.write("EL ÁREA DEL CUADRADO ES: " +area+ "<br>");
+                document.write("<br>");
+            } else {
+               if (opcion===2) {
+                base= parseInt(prompt("Ingresa la medida de la base del rectangulo"));
+                altura= parseInt(prompt("Ingresa la medida de la altura rectangulo"));
+                area= base*altura;
+
+                document.write("=======RECTANGULO RESULTADO======="+"<br>");
+                document.write("<br>");
+                document.write("LONGITUD DE LA BASE: "+base+ " <br>");
+                document.write("<br>");
+                document.write("LONGITUD DE LA ALTURA: "+altura+ "<br>");
+                document.write("<br>");
+                document.write("EL ÁREA DEL RECTANGULO ES: " +area+ "<br>");
+                document.write("<br>");
+               } else {
+                if (opcion===3) {
+                base= parseInt(prompt("Ingresa la medida de la base del triangulo"));
+                altura= parseInt(prompt("Ingresa la medida de la altura del triangulo"));
+                area= (base*altura)/2;
+
+                document.write("=======TRIANGULO RESULTADO======="+"<br>");
+                document.write("<br>");
+                document.write("LONGITUD DE LA BASE: "+base+ " <br>");
+                document.write("<br>");
+                document.write("LONGITUD DE LA ALTURA: "+altura+ " <br>");
+                document.write("EL ÁREA DEL TRIANGULO ES: " +area+ "<br>");
+            
+                } else {
+                    if (opcion===4) {
+                        radio= parseInt(prompt("Ingresa el radio del circulo"));
+                        area= Math.PI*(radio*radio);
+
+                        document.write("=======CIRCULO RESULTADO======="+"<br>");
+                        document.write("<br>");
+                        document.write("EL RADIO DEL CIRCULO ES: "+radio+ " <br>");
+                        document.write("<br>");
+                        document.write("EL ÁREA DEL CIRCULO ES: " +area.toFixed(2)+ "<br>");
+                        document.write("<br>");
+                    } else {
+                        alert("OPERACION NO PERMITIDA")
+                    }
+                }
+               } 
+            }
+
+
+            //Fase de Salida
+
+C
+
+        </script>
+    </div>
+   
+</main>
+
+
+</body>
+</html>

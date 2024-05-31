@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIO 2</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+
+<body>
+    
+<main>
+
+    <header>
+        <img src="img/logo.png" alt="logo" height="70px">
+
+    </header>
+
+    <div id="caso">
+        <img src="img/ejercicio2.png" alt="">
+    </div>
+
+    <h1>EXAMEN PARCIAL / 2024-1</h1>
+
+
+    <div id="solucion">
+
+        <script>
+            // Declaracion de variables
+            var horas_trabajadas,pago_hora,incremento,
+
+
+            // fase de lectura / estructura
+
+            horas_trabajadas= parseInt(prompt("Escribe las horas trabajadas"))
+            pago_hora=parseInt(prompt("Cantidad de pago por hora"))
+
+            //fase procesamientos de datos
+
+            monto_total= horas_trabajadas*pago_hora;
+            aumento= monto_total*0.60;
+            montoconaumento= monto_total+aumento
+            //Fase de salida
+
+            if (horas_trabajadas>=50) {
+                mensaje="Se le pagará mas el 60% extra S/. " +montoconaumento;   
+            } else {
+                mensaje="Se le pagará el monto sin aumento, es igual a s/. " +monto_total;
+            }
+
+
+            //Fase de Salida
+
+            document.write("=======MONTO A PAGAR POR CAMISAS======="+"<br>");
+            document.write("<br>");
+            document.write("Cantidad de horas trabajadas : "+horas_trabajadas+ "<br>");
+            document.write("Pago por hora: S/" +pago_hora+ "<br>");
+            document.write("El monto que se le paga por hora es S/. : "+monto_total+ "<br>");
+            document.write(mensaje+ "<br>");
+            document.write("<br>");
+
+        </script>
+    </div>
+   
+</main>
+
+
+</body>
+</html>
