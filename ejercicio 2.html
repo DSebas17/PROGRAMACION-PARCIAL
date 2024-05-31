@@ -28,31 +28,34 @@
 
         <script>
             // Declaracion de variables
-            var horas_trabajadas,pago_hora,incremento,
+            var horas_trabajadas,pago_hora,incremento,monto_total
 
 
             // fase de lectura / estructura
 
             horas_trabajadas= parseInt(prompt("Escribe las horas trabajadas"))
             pago_hora=parseInt(prompt("Cantidad de pago por hora"))
+            monto_total=0;
 
             //fase procesamientos de datos
 
-            monto_total= horas_trabajadas*pago_hora;
-            aumento= monto_total*0.60;
-            montoconaumento= monto_total+aumento
+
             //Fase de salida
 
-            if (horas_trabajadas>=50) {
-                mensaje="Se le pagará mas el 60% extra S/. " +montoconaumento;   
+            if (horas_trabajadas<=50) {
+                monto_total= horas_trabajadas*pago_hora;
+                mensaje="Se le pagará:  S/. " +monto_total;   
             } else {
-                mensaje="Se le pagará el monto sin aumento, es igual a s/. " +monto_total;
+                var horas_sinaumento=50;
+                var horas_adicionales= horas_trabajadas - horas_sinaumento;
+                monto_total= (horas_sinaumento*pago_hora) + (horas_adicionales*(pago_hora*1.6));
+ 
             }
 
 
             //Fase de Salida
 
-            document.write("=======MONTO A PAGAR POR CAMISAS======="+"<br>");
+            document.write("=======PAGO DE UN TRABAJADOR======="+"<br>");
             document.write("<br>");
             document.write("Cantidad de horas trabajadas : "+horas_trabajadas+ "<br>");
             document.write("Pago por hora: S/" +pago_hora+ "<br>");
